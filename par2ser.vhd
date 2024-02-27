@@ -26,7 +26,7 @@ begin
 	if(rising_edge(clk)) then
 		if (en = '1') then
 		   count <= count + 1;
-            if(count = 7) then
+            if(count = N-1) then
                 parallel_in <= data;
                 count <= 0;
             end if;
